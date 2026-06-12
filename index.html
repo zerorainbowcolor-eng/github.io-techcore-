@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TECH CORE inc. | テクノロジーで、ビジネスの軌道を変える。</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // ハッシュ付きでランディングした場合、ヒーローをスキップして即ジャンプ
+    if (location.hash && location.hash !== '#') {
+      document.documentElement.style.scrollBehavior = 'auto';
+      window.addEventListener('load', function() {
+        var t = document.querySelector(location.hash);
+        if (t) { t.scrollIntoView(); }
+        document.documentElement.style.scrollBehavior = '';
+      }, { once: true });
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">TECH CORE <span>inc.</span></a>
+      <nav class="global-nav" aria-label="グローバルナビゲーション">
+        <ul>
+          <li><a href="service.html">SERVICE</a></li>
+          <li><a href="index.html#tech">TECHNOLOGIES</a></li>
+          <li><a href="cases.html">CASE STUDIES</a></li>
+          <li><a href="company.html">COMPANY</a></li>
+        </ul>
+      </nav>
+      <a href="contact.html" class="btn btn-primary">お見積り・お問い合わせ</a>
+      <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero hero-bg" aria-label="メインビジュアル">
+      <div class="hero-bg-img" aria-hidden="true"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-inner hero-inner-center">
+        <div class="hero-text hero-text-light">
+          <h1 class="hero-typewriter" aria-label="テクノロジーで、ビジネスの軌道を変える。"><span id="typewriter-text"></span><span class="typewriter-cursor">|</span></h1>
+          <p class="hero-sub hero-anim" style="--anim-delay:0s"><span class="split-line">Transforming Business Through Technology.</span></p>
+          <p class="hero-desc hero-anim" style="--anim-delay:.15s"><span class="split-line">システム開発・DXコンサルティング・クラウド統合により、<br>企業の競争優位を創造します。</span></p>
+          <div class="hero-actions hero-anim" style="--anim-delay:.3s">
+            <a href="service.html" class="btn btn-primary" style="--anim-delay:.3s">サービスを見る</a>
+            <a href="cases.html" class="btn btn-outline-light" style="--anim-delay:.45s">導入実績を見る</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="news-section">
+      <div class="container">
+        <header class="sec-header">
+          <span class="sec-label">NEWS</span>
+          <h2 class="sec-title">最新情報</h2>
+          <p class="sec-desc">TECH CORE inc. の最新ニュースとリリース情報をお届けします。</p>
+        </header>
+        <div class="news-grid">
+          <article class="news-card">
+            <time class="news-date" datetime="2026-06-01">2026.06.01</time>
+            <span class="news-cat">プレスリリース</span>
+            <h3>製造業向けDXソリューション「FactoryBridge」正式リリース</h3>
+            <p>生産ラインとクラウドをシームレスに接続するIoTプラットフォームの提供を開始しました。</p>
+            <div class="news-footer"><a href="#" class="card-link">詳しく読む →</a></div>
+          </article>
+          <article class="news-card">
+            <time class="news-date" datetime="2026-05-15">2026.05.15</time>
+            <span class="news-cat">受賞・認定</span>
+            <h3>「DX推進企業100選 2026」に選出されました</h3>
+            <p>経済産業省が主催するDX推進企業の認定プログラムに3年連続で選出されました。</p>
+            <div class="news-footer"><a href="#" class="card-link">詳しく読む →</a></div>
+          </article>
+          <article class="news-card">
+            <time class="news-date" datetime="2026-04-22">2026.04.22</time>
+            <span class="news-cat">採用情報</span>
+            <h3>2027年度 新卒・中途採用エントリー開始のお知らせ</h3>
+            <p>フルスタックエンジニア・クラウドアーキテクト・AIエンジニアを積極採用中です。</p>
+            <div class="news-footer"><a href="#" class="card-link">詳しく読む →</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Overview -->
+    <section class="service-overview" id="services">
+      <div class="container">
+        <header class="sec-header">
+          <span class="sec-label">SERVICES</span>
+          <h2 class="sec-title">私たちのサービス</h2>
+          <p class="sec-desc">ビジネスの課題に合わせた最適なITソリューションを3つの柱で提供します。</p>
+        </header>
+        <div class="service-ov-grid">
+          <article class="service-ov-card">
+            <div class="svc-img"><img src="A.jpg" alt="DX Consulting"></div>
+            <span class="svc-en-label">DX Consulting</span>
+            <h3>デジタルトランスフォーメーションコンサルティング</h3>
+            <p>経営課題をテクノロジーの力で根本から解決します。現状分析からロードマップ策定、実装支援まで一気通貫でサポート。</p>
+            <a href="service.html#dx" class="card-link">詳しく見る →</a>
+          </article>
+          <article class="service-ov-card">
+            <div class="svc-img"><img src="B.jpg" alt="Custom Development"></div>
+            <span class="svc-en-label">Custom Development</span>
+            <h3>カスタムシステム・<br>アプリケーション開発</h3>
+            <p>最新テックスタックを用いた堅牢でスケーラブルなシステム開発。要件定義から保守・運用まで高品質プロダクトを迅速に提供。</p>
+            <a href="service.html#dev" class="card-link">詳しく見る →</a>
+          </article>
+          <article class="service-ov-card">
+            <div class="svc-img"><img src="C.webp" alt="Cloud Integration"></div>
+            <span class="svc-en-label">Cloud Integration</span>
+            <h3>クラウドインフラ構築・<br>統合支援</h3>
+            <p>クラウドネイティブな環境構築による業務効率化とコスト削減。AWS・Azure・GCPを横断したマルチクラウド戦略を実現。</p>
+            <a href="service.html#cloud" class="card-link">詳しく見る →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technologies -->
+    <section class="tech-overview" id="tech">
+      <div class="container">
+        <header class="sec-header">
+          <span class="sec-label">TECHNOLOGIES</span>
+          <h2 class="sec-title">私たちの技術スタンス</h2>
+          <p class="sec-desc">最新の技術を常に追いながら、実績ある安定した選択をバランスよく組み合わせます。</p>
+        </header>
+        <div class="tech-nums tech-nums-center">
+          <div class="t-num">
+            <strong><span data-count="150">0</span><em>+</em></strong>
+            <span>プロジェクト実績</span>
+          </div>
+          <div class="t-num">
+            <strong><span data-count="98">0</span><em>%</em></strong>
+            <span>顧客満足度</span>
+          </div>
+          <div class="t-num">
+            <strong><span data-count="8">0</span><em>年</em></strong>
+            <span>業界経験</span>
+          </div>
+        </div>
+        <ul class="strength-list strength-list-center">
+          <li class="strength-item">
+            <div class="strength-img"><img src="アジャイル.png" alt="アジャイル開発体制"></div>
+            <div
+              <strong>アジャイル開発体制</strong>
+              <p>2週間スプリントで価値を届け、フィードバックを即座に反映します。</p>
+            </div>
+          </li>
+          <li class="strength-item">
+            <div class="strength-img"><img src="セキュリティ.jpg" alt="強固なセキュリティ"></div>
+            <div
+              <strong>強固なセキュリティ</strong>
+              <p>ISO 27001準拠の情報セキュリティ体制でデータを守ります。</p>
+            </div>
+          </li>
+          <li class="strength-item">
+            <div class="strength-img"><img src="迅速.jpg" alt="迅速なデリバリー"></div>
+            <div
+              <strong>迅速なデリバリー</strong>
+              <p>CI/CDパイプラインと自動化テストで高品質を保ちながら高速リリース。</p>
+            </div>
+          </li>
+        </ul>
+        <div class="tech-stack-bottom">
+          <p class="stack-label">Technology Stack</p>
+          <div class="badge-rows">
+            <div class="badge-row">
+              <span class="badge">React</span>
+              <span class="badge">Next.js</span>
+              <span class="badge">TypeScript</span>
+              <span class="badge">Node.js</span>
+              <span class="badge">Python</span>
+              <span class="badge">Go</span>
+              <span class="badge">AWS</span>
+              <span class="badge">Azure</span>
+            </div>
+            <div class="badge-row">
+              <span class="badge">GCP</span>
+              <span class="badge">Terraform</span>
+              <span class="badge">Docker</span>
+              <span class="badge">Kubernetes</span>
+              <span class="badge">PostgreSQL</span>
+              <span class="badge">Redis</span>
+              <span class="badge">GraphQL</span>
+              <span class="badge">REST API</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cases Overview -->
+    <section class="cases-overview">
+      <div class="container">
+        <header class="sec-header">
+          <span class="sec-label">CASE STUDIES</span>
+          <h2 class="sec-title">主な導入事例</h2>
+          <p class="sec-desc">様々な業界のお客様に、確かな成果をお届けしています。</p>
+        </header>
+        <div class="cases-ov-grid">
+          <article class="case-ov-card">
+            <div class="case-thumb">
+              <div class="case-thumb-inner ct-1">
+                <img src="１.jpg" alt="生産管理システム導入事例">
+                <div class="case-tag-wrap">
+                  <span class="case-thumb-tag">製造業 × DX</span>
+                </div>
+              </div>
+            </div>
+            <div class="case-ov-body">
+              <p class="case-ov-company">株式会社 山田製作所</p>
+              <h3>生産管理システムのフルリプレイス</h3>
+              <p>レガシーシステムをクラウドネイティブなアーキテクチャに刷新。リアルタイムデータ連携で生産ラインを最適化。</p>
+              <div class="case-results-mini">
+                <span class="result-val pos">業務効率 +50%</span>
+                <span class="result-val pos">コスト -32%</span>
+              </div>
+              <a href="cases.html" class="card-link">事例を見る →</a>
+            </div>
+          </article>
+          <article class="case-ov-card">
+            <div class="case-thumb">
+              <div class="case-thumb-inner ct-2">
+                <img src="２.jpeg" alt="社内業務プラットフォーム導入事例">
+                <div class="case-tag-wrap">
+                  <span class="case-thumb-tag">金融 × SaaS</span>
+                </div>
+              </div>
+            </div>
+            <div class="case-ov-body">
+              <p class="case-ov-company">佐藤フィナンシャルグループ</p>
+              <h3>社内業務プラットフォームのSaaS化</h3>
+              <p>複数社内ツールを統合したワークフロープラットフォームを構築。承認フロー電子化で業務スピードが大幅改善。</p>
+              <div class="case-results-mini">
+                <span class="result-val pos">処理時間 -65%</span>
+                <span class="result-val pos">満足度 +42pt</span>
+              </div>
+              <a href="cases.html" class="card-link">事例を見る →</a>
+            </div>
+          </article>
+        </div>
+        <div style="text-align:center;margin-top:48px">
+          <a href="cases.html" class="btn btn-ghost">全ての事例を見る</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- News -->
+    <!-- CTA -->
+    <section class="cta-section" id="cta">
+      <div class="container">
+        <p class="cta-eyebrow">GET STARTED</p>
+        <h2>仕様の相談からプロトタイプ制作まで、<br>お気軽にご相談ください。</h2>
+        <p class="cta-sub">初回のご相談は無料です。まずはお気軽にお話しください。</p>
+        <a href="contact.html" class="btn btn-gradient">プロジェクトを始める</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo logo-light">TECH CORE <span>inc.</span></a>
+        <p>テクノロジーで、ビジネスの軌道を変える。<br>システム開発・SaaS・ITコンサルティング</p>
+      </div>
+      <nav class="footer-nav" aria-label="フッターナビゲーション">
+        <div class="footer-nav-col">
+          <p class="footer-nav-title">サービス</p>
+          <ul>
+            <li><a href="service.html#dx">DX Consulting</a></li>
+            <li><a href="service.html#dev">Custom Development</a></li>
+            <li><a href="service.html#cloud">Cloud Integration</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <p class="footer-nav-title">会社情報</p>
+          <ul>
+            <li><a href="company.html">会社概要</a></li>
+            <li><a href="company.html#mission">ミッション</a></li>
+            <li><a href="cases.html">導入事例</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <p class="footer-nav-title">サポート</p>
+          <ul>
+            <li><a href="#cta">お問い合わせ</a></li>
+            <li><a href="privacy.html">プライバシーポリシー</a></li>
+            <li><a href="terms.html">利用規約</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 TECH CORE inc. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Hash jump — skip hero if landing with #tech (or any hash)
+    if (location.hash) {
+      const target = document.querySelector(location.hash);
+      if (target) {
+        document.documentElement.style.scrollBehavior = 'auto';
+        requestAnimationFrame(() => {
+          target.scrollIntoView();
+          document.documentElement.style.scrollBehavior = '';
+        });
+      }
+    }
+
+    // Nav toggle
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.global-nav');
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', !open);
+      nav.classList.toggle('open', !open);
+    });
+
+    // Header scroll
+    window.addEventListener('scroll', () => {
+      document.getElementById('site-header').classList.toggle('scrolled', scrollY > 20);
+    });
+
+    // Typewriter animation
+    (function() {
+      const lines = ['テクノロジーで、', 'ビジネスの軌道を変える。'];
+      const el = document.getElementById('typewriter-text');
+      const cursor = document.querySelector('.typewriter-cursor');
+      let charSpeed = 60;
+      let lineBreakPause = 320;
+      let full = '';
+      let charIndex = 0, lineIndex = 0;
+
+      function type() {
+        if (lineIndex >= lines.length) {
+          // タイプライター完了 → 2秒後に各要素をスプリット発火
+          setTimeout(() => { cursor.style.display = 'none'; }, 900);
+          setTimeout(() => {
+            const targets = document.querySelectorAll(
+              '.hero-anim .split-line, .hero-actions.hero-anim .btn'
+            );
+            targets.forEach((el, i) => {
+              el.style.animationDelay = (i * 0.18) + 's';
+              el.classList.add('is-visible');
+            });
+            // 全テキストアニメーション完了後に背景をフェードイン
+            const lastDelay = (targets.length - 1) * 180 + 1000;
+            setTimeout(() => {
+              document.querySelector('.hero-bg-img').classList.add('is-visible');
+            }, lastDelay);
+          }, 1500);
+          return;
+        }
+        const line = lines[lineIndex];
+        if (charIndex < line.length) {
+          full += line[charIndex];
+          el.textContent = full;
+          charIndex++;
+          setTimeout(type, charSpeed);
+        } else {
+          lineIndex++;
+          charIndex = 0;
+          if (lineIndex < lines.length) {
+            full += '\n';
+            el.style.whiteSpace = 'pre-wrap';
+            setTimeout(type, lineBreakPause);
+          } else {
+            type();
+          }
+        }
+      }
+      // 少し待ってから開始
+      setTimeout(type, 400);
+    })();
+
+    // Count-up animation
+    function countUp(el, target, duration, suffix) {
+      const start = performance.now();
+      const update = (now) => {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        // easeOutExpo
+        const ease = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+        el.textContent = Math.floor(ease * target);
+        if (progress < 1) requestAnimationFrame(update);
+        else el.textContent = target;
+      };
+      requestAnimationFrame(update);
+    }
+
+    const counters = document.querySelectorAll('.t-num [data-count]');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = parseInt(el.dataset.count, 10);
+          const suffix = el.dataset.suffix || '';
+          countUp(el, target, 1800, suffix);
+          observer.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    counters.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

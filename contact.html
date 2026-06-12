@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CONTACT | TECH CORE inc.</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .contact-section{background:var(--bg-card);padding:96px 0}
+    .contact-grid{
+      display:grid;
+      grid-template-columns:1fr 1.6fr;
+      gap:72px;
+      align-items:start;
+    }
+    .contact-info-block{
+      display:flex;flex-direction:column;gap:32px;
+    }
+    .contact-info-item{
+      display:flex;flex-direction:column;gap:6px;
+    }
+    .contact-info-item .label{
+      font-size:.68rem;font-weight:700;letter-spacing:.12em;
+      text-transform:uppercase;color:var(--primary);
+    }
+    .contact-info-item p{
+      font-size:.9rem;color:var(--text-sub);line-height:1.75;
+    }
+    .contact-info-item strong{
+      font-size:.95rem;font-weight:600;color:var(--text-dark);
+    }
+    .contact-divider{
+      height:1px;background:var(--border);
+    }
+
+    /* Form */
+    .contact-form{
+      display:flex;flex-direction:column;gap:20px;
+    }
+    .form-row{
+      display:grid;grid-template-columns:1fr 1fr;gap:16px;
+    }
+    .form-group{
+      display:flex;flex-direction:column;gap:6px;
+    }
+    .form-group label{
+      font-size:.78rem;font-weight:600;color:var(--text-dark);
+      letter-spacing:.02em;
+    }
+    .form-group .required{
+      color:var(--primary);margin-left:4px;font-size:.7rem;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea{
+      width:100%;
+      padding:11px 14px;
+      border:1.5px solid var(--border);
+      border-radius:var(--radius-sm);
+      font-size:.9rem;
+      color:var(--text-dark);
+      background:var(--bg-light);
+      outline:none;
+      transition:border-color var(--dur) var(--ease),
+                 box-shadow var(--dur) var(--ease);
+      font-family:inherit;
+      box-sizing:border-box;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus{
+      border-color:var(--primary);
+      box-shadow:0 0 0 3px rgba(37,99,235,.12);
+      background:#fff;
+    }
+    .form-group textarea{
+      resize:vertical;
+      min-height:140px;
+      line-height:1.7;
+    }
+    .form-group select{
+      appearance:none;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2364748b' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat:no-repeat;
+      background-position:right 14px center;
+      padding-right:36px;
+      cursor:pointer;
+    }
+    .form-note{
+      font-size:.78rem;color:var(--text-sub);line-height:1.7;
+    }
+    .form-note a{color:var(--primary);text-decoration:underline}
+    .form-submit{
+      display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+    }
+    .btn-submit{
+      padding:14px 40px;
+      background:var(--primary);
+      color:#fff;
+      border:none;
+      border-radius:var(--radius-sm);
+      font-size:.95rem;font-weight:700;
+      cursor:pointer;
+      font-family:inherit;
+      transition:background var(--dur) var(--ease),
+                 transform var(--dur) var(--ease);
+    }
+    .btn-submit:hover{background:var(--primary-dark);transform:translateY(-1px)}
+    .form-required-note{
+      font-size:.75rem;color:var(--text-muted);
+    }
+
+    @media(max-width:768px){
+      .contact-grid{grid-template-columns:1fr;gap:48px}
+      .form-row{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">TECH CORE <span>inc.</span></a>
+      <nav class="global-nav" aria-label="グローバルナビゲーション">
+        <ul>
+          <li><a href="service.html">SERVICE</a></li>
+          <li><a href="index.html#tech">TECHNOLOGIES</a></li>
+          <li><a href="cases.html">CASE STUDIES</a></li>
+          <li><a href="company.html">COMPANY</a></li>
+        </ul>
+      </nav>
+      <a href="contact.html" class="btn btn-primary active">お見積り・お問い合わせ</a>
+      <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Page Hero -->
+    <section class="page-hero" aria-label="お問い合わせページヘッダー">
+      <div class="container">
+        <span class="sec-label">CONTACT</span>
+        <h1>お問い合わせ</h1>
+        <p>ご相談・お見積りは無料です。お気軽にご連絡ください。<br>通常2営業日以内にご返信いたします。</p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- Info -->
+          <div class="contact-info-block">
+            <div class="contact-info-item">
+              <span class="label">TEL</span>
+              <strong>03-XXXX-XXXX</strong>
+              <p>平日 9:00〜18:00</p>
+            </div>
+            <div class="contact-divider"></div>
+            <div class="contact-info-item">
+              <span class="label">EMAIL</span>
+              <strong>info@techcore.co.jp</strong>
+            </div>
+            <div class="contact-divider"></div>
+            <div class="contact-info-item">
+              <span class="label">ADDRESS</span>
+              <p>〒105-0011<br>東京都港区芝公園2丁目4-1<br>山田ビル8F</p>
+            </div>
+            <div class="contact-divider"></div>
+            <div class="contact-info-item">
+              <span class="label">初回相談</span>
+              <p>初回のご相談・お見積りは<strong style="color:var(--primary)">無料</strong>です。<br>お気軽にお問い合わせください。</p>
+            </div>
+          </div>
+
+          <!-- Form -->
+          <form class="contact-form" action="#" method="post">
+            <div class="form-row">
+              <div class="form-group">
+                <label>お名前<span class="required">必須</span></label>
+                <input type="text" name="name" placeholder="田中 誠一郎" required>
+              </div>
+              <div class="form-group">
+                <label>会社名<span class="required">必須</span></label>
+                <input type="text" name="company" placeholder="株式会社〇〇" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>メールアドレス<span class="required">必須</span></label>
+                <input type="email" name="email" placeholder="your@email.com" required>
+              </div>
+              <div class="form-group">
+                <label>電話番号</label>
+                <input type="tel" name="tel" placeholder="03-XXXX-XXXX">
+              </div>
+            </div>
+            <div class="form-group">
+              <label>お問い合わせ種別<span class="required">必須</span></label>
+              <select name="type" required>
+                <option value="" disabled selected>選択してください</option>
+                <option value="dx">DXコンサルティングについて</option>
+                <option value="dev">システム・アプリ開発について</option>
+                <option value="cloud">クラウドインフラについて</option>
+                <option value="estimate">お見積り依頼</option>
+                <option value="other">その他</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>お問い合わせ内容<span class="required">必須</span></label>
+              <textarea name="message" placeholder="ご相談内容・ご要望をご記入ください" required></textarea>
+            </div>
+            <p class="form-note">
+              送信前に<a href="privacy.html">プライバシーポリシー</a>をご確認ください。
+            </p>
+            <div class="form-submit">
+              <button type="submit" class="btn-submit">送信する</button>
+              <span class="form-required-note"><span style="color:var(--primary)">*</span> は必須項目です</span>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo logo-light">TECH CORE <span>inc.</span></a>
+        <p>テクノロジーで、ビジネスの軌道を変える。<br>システム開発・SaaS・ITコンサルティング</p>
+      </div>
+      <nav class="footer-nav" aria-label="フッターナビゲーション">
+        <div class="footer-nav-col">
+          <p class="footer-nav-title">サービス</p>
+          <ul>
+            <li><a href="service.html#dx">DX Consulting</a></li>
+            <li><a href="service.html#dev">Custom Development</a></li>
+            <li><a href="service.html#cloud">Cloud Integration</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <p class="footer-nav-title">会社情報</p>
+          <ul>
+            <li><a href="company.html">会社概要</a></li>
+            <li><a href="company.html#mission">ミッション</a></li>
+            <li><a href="cases.html">導入事例</a></li>
+          </ul>
+        </div>
+        <div class="footer-nav-col">
+          <p class="footer-nav-title">サポート</p>
+          <ul>
+            <li><a href="contact.html">お問い合わせ</a></li>
+            <li><a href="privacy.html">プライバシーポリシー</a></li>
+            <li><a href="terms.html">利用規約</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 TECH CORE inc. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.global-nav');
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', !open);
+      nav.classList.toggle('open', !open);
+    });
+    window.addEventListener('scroll', () => {
+      document.getElementById('site-header').classList.toggle('scrolled', scrollY > 20);
+    });
+  </script>
+</body>
+</html>
