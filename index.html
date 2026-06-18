@@ -334,7 +334,10 @@
 
     // Typewriter animation
     (function() {
-      const lines = ['テクノロジーで、', 'ビジネスの軌道を変える。'];
+      const isMobile = window.innerWidth <= 480;
+      const lines = isMobile
+        ? ['テクノロジーで、', 'ビジネスの軌道を変える']
+        : ['テクノロジーで、', 'ビジネスの軌道を変える。'];
       const el = document.getElementById('typewriter-text');
       const cursor = document.querySelector('.typewriter-cursor');
       let charSpeed = 60;

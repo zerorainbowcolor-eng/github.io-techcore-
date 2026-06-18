@@ -1235,4 +1235,7 @@ section{padding:96px 0}
   .badge-row{flex-wrap:wrap}
   .hero-text{display:flex;flex-direction:column}
   .hero-text .hero-sub{order:-1}
+  .hero-text h1{font-size:7.5vw}
+  .hero-desc{font-size:.82rem}
+  .hero-desc br{display:none}
 }
