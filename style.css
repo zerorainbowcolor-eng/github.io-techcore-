@@ -1231,4 +1231,5 @@ section{padding:96px 0}
   .hero-actions .btn{justify-content:center}
   .tech-nums{flex-wrap:wrap;gap:20px}
   .news-grid{gap:12px}
+  .strength-list-center{grid-template-columns:1fr}
 }
