@@ -1232,4 +1232,5 @@ section{padding:96px 0}
   .tech-nums{flex-wrap:wrap;gap:20px}
   .news-grid{gap:12px}
   .strength-list-center{grid-template-columns:1fr}
+  .badge-row{flex-wrap:wrap}
 }
