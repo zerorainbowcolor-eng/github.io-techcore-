@@ -1233,4 +1233,6 @@ section{padding:96px 0}
   .news-grid{gap:12px}
   .strength-list-center{grid-template-columns:1fr}
   .badge-row{flex-wrap:wrap}
+  .hero-text{display:flex;flex-direction:column}
+  .hero-text .hero-sub{order:-1}
 }
